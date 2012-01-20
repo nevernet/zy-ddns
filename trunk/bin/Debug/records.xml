@@ -1,0 +1,30 @@
+<Records>
+  <record>
+    <domain_id>687373</domain_id>
+    <domain_name>our-servers.info</domain_name>
+    <record_id>6114811</record_id>
+    <sub_domain>cncz</sub_domain>
+    <record_line><![CDATA[默认]]></record_line>
+  </record>
+  <record>
+    <domain_id>306660</domain_id>
+    <domain_name>caicaiblog.com</domain_name>
+    <record_id>1243884</record_id>
+    <sub_domain>www</sub_domain>
+    <record_line><![CDATA[默认]]></record_line>
+  </record>
+  <record>
+    <domain_id>348144</domain_id>
+    <domain_name>haojizhang.com</domain_name>
+    <record_id>1408026</record_id>
+    <sub_domain>www</sub_domain>
+    <record_line><![CDATA[默认]]></record_line>
+  </record>
+  <record>
+    <domain_id>187646</domain_id>
+    <domain_name>zhiyusoft.com</domain_name>
+    <record_id>9278907</record_id>
+    <sub_domain>ns9</sub_domain>
+    <record_line><![CDATA[默认]]></record_line>
+  </record>
+</Records>

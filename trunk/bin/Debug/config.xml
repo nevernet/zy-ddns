@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <login_email>your@domain.com</login_email>
+  <login_password>password</login_password>
+  <format>xml</format>
+  <lang>cn</lang>
+  <error_on_empty>yes</error_on_empty>
+</Config>
