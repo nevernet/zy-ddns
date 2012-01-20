@@ -1,0 +1,14 @@
+#ZY DDNS 使用说明
+
+= ZY DDNS =
+
+ZY DDNS 基于.net 3.5 开发， 在windows 7/2008/2008 r2下测试通过。
+
+
+= 使用方法 =
+
+请先到xml里面配置config.xml。 只要配置email和password即可。
+其他的不要更改。
+
+运行：ddnspod.exe， 然后双击某条记录进行操作即可。
+
