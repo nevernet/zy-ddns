@@ -30,7 +30,7 @@ namespace DDNSPod.DNSPod.Api
             doc.LoadXml(returnString);
 
             XmlNode node = doc.SelectSingleNode("//dnspod/status");
-
+            if (node == null) return "";
             return node.InnerXml;
 
         }
