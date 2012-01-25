@@ -91,8 +91,10 @@ namespace DDNSPod.DNSPod.Api
             }
             catch (Exception exc)
             {
-                throw;
+                //throw;
+                return "";
             }
+            
         }
     }
 }
