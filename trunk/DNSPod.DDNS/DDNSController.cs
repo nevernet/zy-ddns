@@ -8,6 +8,7 @@ using System.IO;
 using System.Reflection;
 using System.Net;
 using DDNSPod.DNSPod.Api;
+using System.Text.RegularExpressions;
 
 namespace DDNSPod.DNSPod.DDNS
 {
@@ -73,13 +74,14 @@ namespace DDNSPod.DNSPod.DDNS
 
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://myip.sinaapp.com/");
+                //HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://myip.zhiyusoft.com/");
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://iframe.ip138.com/ic.asp");
                 request.Credentials = CredentialCache.DefaultCredentials;
                 //request.UserAgent = "";
                 request.Method = "GET";
                 request.ContentLength = 0;
                 request.ContentType = "application/x-www-form-urlencoded";
-                request.UserAgent = "ZY DDNS Client/1.0.0 (ysixin@gmail.com)";
+                request.UserAgent = "ZY DDNS Client/1.0.3 (ysixin@gmail.com)";
                 request.Timeout = 1000 * 10;
 
                 // execute the request
@@ -87,7 +89,14 @@ namespace DDNSPod.DNSPod.DDNS
 
                 Stream resStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(resStream);
-                ip = reader.ReadToEnd();
+                string results = reader.ReadToEnd();
+
+                Regex reg = new Regex(@"\[(.*?)\]", RegexOptions.Multiline);
+                Match match = reg.Match(results);
+                if (match.Success)
+                {
+                    ip = match.Groups[1].Value;
+                }
             }
             catch (Exception exc)
             {
